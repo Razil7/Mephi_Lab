@@ -1,7 +1,6 @@
 #pragma once
-void test_Merge_Sort_numbers();
-void test_Quick_Sort_numbers();
-void test_Merge_sort_people();
-void test_Quick_sort_people();
-void test_Merge_sort_file();
-void test_Quick_sort_file();
+#include "people.h"
+void test_Sort_numbers(Sorter<double>& sorter);
+void test_Sort_people(Sorter<people>& sorter);
+void test_Sort_file_Numbers(Sorter<double>& sorter);
+void test_Sort_file_People(Sorter<people>& sorter);

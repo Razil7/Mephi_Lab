@@ -129,9 +129,8 @@
   <ItemGroup>
     <ClInclude Include="DynamicArr.h" />
     <ClInclude Include="DynamicArrSequence.h" />
-    <ClInclude Include="inputQ.txt" />
     <ClInclude Include="MutableSequence.h" />
-    <ClInclude Include="outputQ.txt" />
+    <ClInclude Include="people.h" />
     <ClInclude Include="QuickSort.h" />
     <ClInclude Include="MergeSort.h" />
     <ClInclude Include="Isorters.h" />
@@ -143,8 +142,10 @@
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="inputM.txt" />
-    <Text Include="outputM.txt" />
+    <Text Include="input.txt" />
+    <Text Include="inputPeople.txt" />
+    <Text Include="output.txt" />
+    <Text Include="outputPeople.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

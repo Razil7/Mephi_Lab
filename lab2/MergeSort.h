@@ -1,12 +1,13 @@
 #pragma once
 #include <iostream>
 #include "DynamicArrSequence.h"
+#include <functional>
 #include "Isorters.h"
 
 
 template <typename T>
 class MergeSort :public Isorted<T> {
-	void merge(DynamicArrSequence<T>& arr, int start, int finish, bool(*&F)(T&, T&)) {
+	void merge(MutableSequence<T>& arr, int start, int finish, std::function<bool(const T&,const T&)> F) {
 		if (finish - start < 1) {
 			return;
 		}
@@ -17,40 +18,34 @@ class MergeSort :public Isorted<T> {
 
 		int first = start;
 		int second = mid + 1;
-		T* arr2 = new T[finish - start + 1];
-		int a = 0;
+		DynamicArrSequence<T> arr2(finish - start + 1);
 
 		while (first <= mid and second <= finish) {
 
-			if ( (*F)( arr[second],arr[first] ) ) {
-				arr2[a] = arr[second];
-				a++;
+			if ( F( arr[second],arr[first] ) ) {
+				arr2.push_back(arr[second]);
 				second++;
 			}
 			else {
-				arr2[a] = arr[first];
+				arr2.push_back(arr[first]);
 				first++;
-				a++;
 			}
 		}
 		while (first <= mid) {
-			arr2[a] = arr[first];
-			a++;
+			arr2.push_back(arr[first]);
 			first++;
 		}
 		while (second <= finish) {
-			arr2[a] = arr[second];
-			a++;
+			arr2.push_back(arr[second]);
 			second++;
 		}
 
 		for (int i = 0; i < finish - start + 1; i++) {
 			arr[start + i] = arr2[i];
 		}
-		delete[] arr2;
 	}
 public:
-	void Sort(DynamicArrSequence<T>& arr, bool(*&F)(T&, T&)) override
+	void Sort(MutableSequence<T>& arr, std::function<bool(const T&, const T&)> F) override
 	{
 		merge(arr, 0, arr.get_colElm() - 1, F);
 	}

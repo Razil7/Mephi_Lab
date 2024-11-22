@@ -39,11 +39,8 @@
     <ClInclude Include="test.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="inputQ.txt">
-      <Filter>Файлы ресурсов</Filter>
-    </ClInclude>
-    <ClInclude Include="outputQ.txt">
-      <Filter>Файлы ресурсов</Filter>
+    <ClInclude Include="people.h">
+      <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -55,10 +52,16 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="inputM.txt">
+    <Text Include="input.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
-    <Text Include="outputM.txt">
+    <Text Include="output.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="outputPeople.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="inputPeople.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
   </ItemGroup>
