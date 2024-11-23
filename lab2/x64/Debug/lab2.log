@@ -1,3 +1,4 @@
 ﻿  main.cpp
-C:\Users\дом\source\repos\lab2\lab2\main.cpp(127,26): warning C4101: e: неиспользованная локальная переменная
+C:\Users\дом\source\repos\lab2\lab2\main.cpp(102,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\дом\source\repos\lab2\lab2\main.cpp(124,26): warning C4101: e: неиспользованная локальная переменная
   lab2.vcxproj -> C:\Users\дом\source\repos\lab2\x64\Debug\lab2.exe
